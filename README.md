@@ -96,14 +96,14 @@
       <div class="project">
         <h3>JUnit Testing Example</h3>
         <p>Example of a JUnit test case written for the checkerboard project, demonstrating test-driven development practices.</p>
-        <img src="https://github.com/user-attachments/assets/8d43bbcc-ffca-45c9-9b5e-999250effd26" alt="JUnit test screenshot">
+        <img width="452" alt="Screenshot 2025-05-22 at 1 19 47 AM" src="https://github.com/user-attachments/assets/df59ea0c-6219-41ae-8e63-8fc1903813d4" />
         <p><em>JUnit test case in Eclipse IDE.</em></p>
       </div>
 
       <div class="project">
         <h3>UML Diagrams</h3>
         <p>Created UML diagrams to document system architecture, class relationships, and object interactions for the project.</p>
-        <img src="https://github.com/user-attachments/assets/35af6eb3-875c-4cab-a367-ba226fd069a9" alt="UML diagram screenshot">
+        <img width="485" alt="Screenshot 2025-05-22 at 1 26 20 AM" src="https://github.com/user-attachments/assets/35af6eb3-875c-4cab-a367-ba226fd069a9" />
         <p><em>UML class diagram used for design planning.</em></p>
       </div>
     </section>
@@ -116,8 +116,8 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>📧 <a href="mailto:yvette@example.com">yvette@example.com</a></p>
-      <p>💼 <a href="https://www.linkedin.com/in/yvettewieseler/" target="_blank">LinkedIn</a></p>
+      <p>📧 <a href="mailto:yvette@example.com">yvettewies1@gmail.com</a></p>
+      <p>💼 <a href="www.linkedin.com/in/yvette-wieseler-1a63712b4" target="_blank">LinkedIn</a></p>
     </section>
 
   </div>
