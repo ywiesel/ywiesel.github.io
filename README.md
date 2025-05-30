@@ -89,8 +89,8 @@
         <h3>Checkerboard Game (Team Project)</h3>
         <p>Developed a command-line checkerboard game in Java as part of a 4-person team. My contributions included move validation and turn logic. Demonstrated OOP principles and collaborative development.</p>
         <p><strong>Technologies:</strong> Java, Git, Terminal I/O</p>
-        <img width="901" alt="Screenshot 2025-05-30 at 3 40 11 PM" src="https://github.com/user-attachments/assets/0937c793-f006-4ada-90b3-f52d2b98026b" />
-" alt="Checkerboard terminal output">
+        <img width="901" alt="Screenshot 2025-05-30 at 3 40 11 PM" src="https://github.com/user-attachments/assets/0846a050-c2d8-4e95-b0bd-9f6b5b7b3ecb" />
+
         <p><em>Terminal output from checkerboard game.</em></p>
       </div>
 
