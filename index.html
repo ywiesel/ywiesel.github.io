@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yvette Wieseler | Software Developer Portfolio</title>
+  <title>Yvette Wieseler | Portfolio</title>
 
   <style>
     body {
@@ -71,11 +71,13 @@
       margin-bottom: 2rem;
     }
 
+    /* Smaller, cleaner images */
     .project img {
-      max-width: 100%;
-      height: auto;
+      display: block;
+      max-width: 600px;
+      width: 100%;
+      margin: 1rem auto 0;
       border-radius: 6px;
-      margin-top: 1rem;
       border: 1px solid #ddd;
     }
 
@@ -84,20 +86,12 @@
       margin-top: 0.5rem;
       color: #666;
       font-size: 0.9rem;
+      text-align: center;
     }
 
-    .resume-button {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background-color: #3f51b5;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 1rem;
-    }
-
-    .resume-button:hover {
-      background-color: #303f9f;
+    .section-divider {
+      margin: 4rem 0;
+      border-top: 3px solid #e0e0e0;
     }
 
     footer {
@@ -115,68 +109,82 @@
 
   <header>
     <h1>Yvette Wieseler</h1>
-    <p class="subtitle">Software Developer · Problem Solver · Team Collaborator</p>
+    <p class="subtitle">Problem Solver · Team Collaborator</p>
   </header>
 
   <nav>
     <a href="#projects">Projects</a>
-    <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <div class="container">
 
+    <!-- FEATURED PROJECTS -->
     <section id="projects">
-      <h2>Projects</h2>
+      <h2>Featured Project</h2>
 
       <div class="project">
         <h3>Checkerboard Game (Team Project)</h3>
         <p>
           Developed a command-line checkerboard game in Java as part of a 4-person team.
-          My contributions included move validation and turn logic, demonstrating object-oriented
-          programming and collaborative development.
+          My contributions included move validation and turn logic, demonstrating
+          object-oriented programming and collaborative development.
         </p>
         <p><strong>Technologies:</strong> Java, Git, Terminal I/O</p>
         <img
           alt="Terminal output from checkerboard game"
           src="https://github.com/user-attachments/assets/0846a050-c2d8-4e95-b0bd-9f6b5b7b3ecb"
         />
-        <em>Terminal output from checkerboard game.</em>
+        <em>Terminal output from checkerboard game</em>
       </div>
 
       <div class="project">
         <h3>JUnit Testing Example</h3>
         <p>
-          Wrote JUnit test cases for the checkerboard project to validate game logic
-          and demonstrate test-driven development practices.
+          Wrote JUnit test cases to validate game logic and demonstrate
+          test-driven development practices.
         </p>
         <img
-          alt="JUnit test case in Eclipse IDE"
           src="https://github.com/user-attachments/assets/df59ea0c-6219-41ae-8e63-8fc1903813d4"
         />
-        <em>JUnit test case in Eclipse IDE.</em>
       </div>
 
       <div class="project">
         <h3>UML Diagrams</h3>
         <p>
-          Designed UML diagrams to document system architecture, class relationships,
-          and object interactions during the planning phase.
+          Created UML diagrams to document system architecture,
+          class relationships, and object interactions.
         </p>
         <img
           alt="UML class diagram"
           src="https://github.com/user-attachments/assets/35af6eb3-875c-4cab-a367-ba226fd069a9"
         />
-        <em>UML class diagram used for design planning.</em>
+        <em>UML class diagram used for design planning</em>
       </div>
     </section>
 
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>Click below to view or download my resume.</p>
-      <a class="resume-button" href="YvetteWieseler_Resume.pdf" target="_blank">
-        📄 View Resume
-      </a>
+    <!-- CLEAR SEPARATION -->
+    <div class="section-divider"></div>
+
+    <!-- ADDITIONAL PROJECT -->
+    <section id="additional-projects">
+      <h2>Additional Projects</h2>
+
+      <div class="project">
+        <h3>Maze Generator (Union–Find)</h3>
+        <p>
+          Implemented a randomized maze generator using the Union–Find
+          data structure and visualized the process using SDL2
+          following the MVC architecture.
+        </p>
+        <p><strong>Technologies:</strong> C++, SDL2, Union–Find, MVC</p>
+
+        <!-- Replace with your image -->
+        <!--
+        <img src="IMAGE_URL_HERE" alt="Maze generator visualization" />
+        <em>Real-time maze generation visualization</em>
+        -->
+      </div>
     </section>
 
     <section id="contact">
@@ -198,3 +206,4 @@
 
 </body>
 </html>
+
