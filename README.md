@@ -3,52 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yvette Wieseler | Portfolio</title>
+  <title>Yvette Wieseler | Software Developer Portfolio</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
       color: #333;
     }
+
     header {
       background-color: #3f51b5;
       color: white;
-      padding: 2rem;
+      padding: 2.5rem 1rem;
       text-align: center;
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .subtitle {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
     nav {
       background: #eee;
-      padding: 0.5rem;
+      padding: 0.75rem;
       text-align: center;
     }
+
     nav a {
       margin: 0 1rem;
       text-decoration: none;
       color: #3f51b5;
       font-weight: bold;
     }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     .container {
       padding: 2rem;
       max-width: 900px;
       margin: auto;
     }
+
     h2 {
       border-bottom: 2px solid #ddd;
       padding-bottom: 0.5rem;
-      margin-top: 2rem;
+      margin-top: 2.5rem;
     }
+
     .project {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       margin-bottom: 2rem;
     }
+
     .project img {
       max-width: 100%;
       height: auto;
-      border: 1px solid #ccc;
-      margin-top: 0.5rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+      border: 1px solid #ddd;
     }
+
+    .project em {
+      display: block;
+      margin-top: 0.5rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
     .resume-button {
       display: inline-block;
       padding: 0.75rem 1.5rem;
@@ -58,20 +95,27 @@
       border-radius: 5px;
       margin-top: 1rem;
     }
+
+    .resume-button:hover {
+      background-color: #303f9f;
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
       background-color: #f0f0f0;
       color: #777;
-      margin-top: 2rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
 
   <header>
     <h1>Yvette Wieseler</h1>
-    <p>Software Developer | Problem Solver | Team Collaborator</p>
+    <p class="subtitle">Software Developer · Problem Solver · Team Collaborator</p>
   </header>
 
   <nav>
@@ -87,38 +131,63 @@
 
       <div class="project">
         <h3>Checkerboard Game (Team Project)</h3>
-        <p>Developed a command-line checkerboard game in Java as part of a 4-person team. My contributions included move validation and turn logic. Demonstrated OOP principles and collaborative development.</p>
+        <p>
+          Developed a command-line checkerboard game in Java as part of a 4-person team.
+          My contributions included move validation and turn logic, demonstrating object-oriented
+          programming and collaborative development.
+        </p>
         <p><strong>Technologies:</strong> Java, Git, Terminal I/O</p>
-        <img width="901" alt="Screenshot 2025-05-30 at 3 40 11 PM" src="https://github.com/user-attachments/assets/0846a050-c2d8-4e95-b0bd-9f6b5b7b3ecb" />
-
-        <p><em>Terminal output from checkerboard game.</em></p>
+        <img
+          alt="Terminal output from checkerboard game"
+          src="https://github.com/user-attachments/assets/0846a050-c2d8-4e95-b0bd-9f6b5b7b3ecb"
+        />
+        <em>Terminal output from checkerboard game.</em>
       </div>
 
       <div class="project">
         <h3>JUnit Testing Example</h3>
-        <p>Example of a JUnit test case written for the checkerboard project, demonstrating test-driven development practices.</p>
-        <img width="452" alt="Screenshot 2025-05-22 at 1 19 47 AM" src="https://github.com/user-attachments/assets/df59ea0c-6219-41ae-8e63-8fc1903813d4" />
-        <p><em>JUnit test case in Eclipse IDE.</em></p>
+        <p>
+          Wrote JUnit test cases for the checkerboard project to validate game logic
+          and demonstrate test-driven development practices.
+        </p>
+        <img
+          alt="JUnit test case in Eclipse IDE"
+          src="https://github.com/user-attachments/assets/df59ea0c-6219-41ae-8e63-8fc1903813d4"
+        />
+        <em>JUnit test case in Eclipse IDE.</em>
       </div>
 
       <div class="project">
         <h3>UML Diagrams</h3>
-        <p>Created UML diagrams to document system architecture, class relationships, and object interactions for the project.</p>
-        <img width="485" alt="Screenshot 2025-05-22 at 1 26 20 AM" src="https://github.com/user-attachments/assets/35af6eb3-875c-4cab-a367-ba226fd069a9" />
-        <p><em>UML class diagram used for design planning.</em></p>
+        <p>
+          Designed UML diagrams to document system architecture, class relationships,
+          and object interactions during the planning phase.
+        </p>
+        <img
+          alt="UML class diagram"
+          src="https://github.com/user-attachments/assets/35af6eb3-875c-4cab-a367-ba226fd069a9"
+        />
+        <em>UML class diagram used for design planning.</em>
       </div>
     </section>
 
     <section id="resume">
       <h2>Resume</h2>
       <p>Click below to view or download my resume.</p>
-      <a class="resume-button" href="YvetteWieseler_Resume.pdf" target="_blank">📄 View Resume</a>
+      <a class="resume-button" href="YvetteWieseler_Resume.pdf" target="_blank">
+        📄 View Resume
+      </a>
     </section>
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>📧 <a href="mailto:yvette@example.com">yvettewies1@gmail.com</a></p>
-      <p>💼 <a href="www.linkedin.com/in/yvette-wieseler-1a63712b4" target="_blank">LinkedIn</a></p>
+      <p>📧 <a href="mailto:yvettewies1@gmail.com">yvettewies1@gmail.com</a></p>
+      <p>
+        💼
+        <a href="https://www.linkedin.com/in/yvette-wieseler-1a63712b4" target="_blank">
+          LinkedIn
+        </a>
+      </p>
     </section>
 
   </div>
