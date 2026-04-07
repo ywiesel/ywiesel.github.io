@@ -172,6 +172,45 @@
       margin-top: 0.55rem;
     }
 
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .project-gallery figure {
+      margin: 0;
+      border: 1px solid var(--border);
+      background: #fcfcfc;
+      padding: 0.65rem;
+    }
+
+    .project-gallery img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border: 1px solid #ececec;
+      display: block;
+    }
+
+    .project-gallery figcaption {
+      margin-top: 0.45rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .project-note {
+      margin-top: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .placeholder {
+      color: var(--muted);
+      font-style: italic;
+    }
+
     .label {
       font-weight: 700;
     }
@@ -219,6 +258,10 @@
 
       .skill-row strong {
         min-width: 0;
+      }
+
+      .project-gallery {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -268,7 +311,7 @@
         <article class="project">
           <div class="project-header">
             <h3 class="project-title">Checkerboard Game</h3>
-            <div class="project-type">Team Project</div>
+            <div class="project-type">Team Project | Java</div>
           </div>
           <p>
             Developed a command-line checkerboard game in Java as part of a four-person team.
@@ -280,47 +323,36 @@
             <li>Implemented logic for legal and invalid moves.</li>
             <li>Worked on turn flow to support consistent gameplay behavior.</li>
             <li>Collaborated within a shared codebase as part of a team development process.</li>
+            <li>Built and reviewed JUnit tests to validate movement logic, crown behavior, and game rules.</li>
+            <li>Created UML diagrams and supporting documentation to clarify class relationships and system structure.</li>
           </ul>
-        </article>
-
-        <article class="project">
-          <div class="project-header">
-            <h3 class="project-title">JUnit Testing Example</h3>
-            <div class="project-type">Testing</div>
+          <div class="project-gallery">
+            <figure>
+              <img src="images/checkersPhoto.png" alt="Checkerboard game screenshot showing the board in play">
+              <figcaption>Gameplay screenshot from the checkerboard project.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/junit2.png" alt="JUnit test screenshot from the checkerboard project">
+              <figcaption>JUnit testing used to verify rule-heavy game behavior.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/junit3.png" alt="Additional JUnit test screenshot from the checkerboard project">
+              <figcaption>More test coverage for important gameplay logic.</figcaption>
+            </figure>
+            <figure>
+              <img src="images/junit4.png" alt="JUnit test screenshot for checkerboard game directions">
+              <figcaption>Test cases covering direction and movement rules.</figcaption>
+            </figure>
           </div>
-          <p>
-            Wrote JUnit test cases to validate game behavior and support a more reliable
-            development process. Focused on testing rule-heavy parts of the application,
-            including movement logic and crown behavior.
+          <p class="project-note">
+            This section includes gameplay and testing artifacts from the checkerboard project. A UML image can be added here once you have the file ready.
           </p>
-          <p><span class="label">Technologies:</span> Java, JUnit</p>
-          <ul>
-            <li>Created tests for core gameplay scenarios and edge cases.</li>
-            <li>Used testing to catch logic issues early and improve confidence in changes.</li>
-          </ul>
-        </article>
-
-        <article class="project">
-          <div class="project-header">
-            <h3 class="project-title">UML Diagrams and Documentation</h3>
-            <div class="project-type">Design</div>
-          </div>
-          <p>
-            Created UML diagrams and supporting documentation to describe class relationships,
-            system structure, and object interactions. This helped organize the design before
-            and during development.
-          </p>
-          <p><span class="label">Technologies:</span> UML, Software Design Documentation</p>
-          <ul>
-            <li>Mapped architecture and class responsibilities clearly.</li>
-            <li>Used documentation to support planning and team communication.</li>
-          </ul>
         </article>
 
         <article class="project">
           <div class="project-header">
             <h3 class="project-title">Maze Generator Using Union-Find</h3>
-            <div class="project-type">Algorithm and Visualization</div>
+            <div class="project-type">C++ Project</div>
           </div>
           <p>
             Implemented a randomized maze generator in C++ using the Union-Find data structure
@@ -331,6 +363,20 @@
             <li>Applied a core data structure to a visual algorithmic project.</li>
             <li>Combined program structure, visualization, and algorithm design in one system.</li>
           </ul>
+          <p class="project-note">
+            Image or demo preview can be added here when you are ready.
+          </p>
+        </article>
+
+        <article class="project">
+          <div class="project-header">
+            <h3 class="project-title">Future Project</h3>
+            <div class="project-type">Coming Soon</div>
+          </div>
+          <p class="placeholder">
+            This section is ready for the next project you add. We can drop in the title,
+            summary, technologies, and supporting images when you are ready.
+          </p>
         </article>
       </section>
 
