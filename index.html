@@ -3,27 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Yvette Wieseler | Software Developer Portfolio</title>
+  <title>Yvette Wieseler | Portfolio</title>
   <meta
     name="description"
-    content="Portfolio of Yvette Wieseler, a computer science student focused on Java, C++, testing, and building reliable software."
+    content="Portfolio of Yvette Wieseler, a computer science student with experience in Java, C++, software design, and testing."
   >
   <style>
     :root {
-      --bg: #f4efe7;
-      --surface: rgba(255, 251, 245, 0.88);
-      --surface-strong: #fffdf8;
-      --ink: #1f2933;
-      --muted: #556270;
-      --line: rgba(31, 41, 51, 0.12);
-      --accent: #c75c2f;
-      --accent-deep: #8d3416;
-      --accent-soft: #f6d3bc;
-      --shadow: 0 24px 60px rgba(64, 44, 21, 0.12);
-      --radius-lg: 28px;
-      --radius-md: 18px;
-      --radius-sm: 12px;
-      --content-width: 1120px;
+      --bg: #f7f7f7;
+      --surface: #ffffff;
+      --text: #1f1f1f;
+      --muted: #5b5b5b;
+      --border: #d9d9d9;
+      --accent: #1d4d7a;
+      --max-width: 920px;
     }
 
     * {
@@ -36,672 +29,321 @@
 
     body {
       margin: 0;
+      background: var(--bg);
+      color: var(--text);
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1.6;
-      color: var(--ink);
-      background:
-        radial-gradient(circle at top left, rgba(199, 92, 47, 0.16), transparent 34%),
-        radial-gradient(circle at top right, rgba(95, 132, 111, 0.18), transparent 28%),
-        linear-gradient(180deg, #fbf7f0 0%, var(--bg) 52%, #efe5d8 100%);
     }
 
     a {
-      color: inherit;
+      color: var(--accent);
+      text-decoration: none;
     }
 
     a:hover {
-      color: var(--accent-deep);
+      text-decoration: underline;
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .page-shell {
-      width: min(calc(100% - 2rem), var(--content-width));
-      margin: 0 auto;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(18px);
-      background: rgba(244, 239, 231, 0.78);
-      border-bottom: 1px solid rgba(31, 41, 51, 0.08);
-    }
-
-    .topbar-inner {
-      width: min(calc(100% - 2rem), var(--content-width));
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 1rem 0;
-    }
-
-    .brand {
-      font-size: 0.95rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    nav a {
-      text-decoration: none;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    nav a:focus-visible,
-    .button:focus-visible,
-    .social-link:focus-visible {
-      outline: 3px solid rgba(199, 92, 47, 0.35);
-      outline-offset: 3px;
-      border-radius: 999px;
-    }
-
-    .hero {
-      padding: 5.5rem 0 2.5rem;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 2rem;
-      align-items: stretch;
-    }
-
-    .hero-copy,
-    .hero-panel,
-    .section-card,
-    .project-card,
-    .contact-card {
+    .page {
+      width: min(calc(100% - 2rem), var(--max-width));
+      margin: 2rem auto;
       background: var(--surface);
-      border: 1px solid rgba(255, 255, 255, 0.7);
-      box-shadow: var(--shadow);
-      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      padding: 2.5rem;
     }
 
-    .hero-copy {
-      padding: 3rem;
-    }
-
-    .eyebrow {
-      margin: 0 0 0.9rem;
-      font-size: 0.82rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent-deep);
+    header {
+      border-bottom: 2px solid var(--text);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     h1,
     h2,
     h3 {
-      font-weight: 600;
-      line-height: 1.1;
       margin: 0;
+      font-weight: 700;
+      line-height: 1.2;
     }
 
     h1 {
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      max-width: 10ch;
+      font-size: 2.3rem;
+      letter-spacing: 0.02em;
     }
 
-    .intro {
-      margin: 1.4rem 0 0;
-      max-width: 56ch;
+    .subtitle {
+      margin: 0.45rem 0 0;
       color: var(--muted);
-      font-size: 1.08rem;
-    }
-
-    .button-row,
-    .socials,
-    .tag-list,
-    .skill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .button-row {
-      margin-top: 2rem;
-    }
-
-    .button,
-    .social-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.45rem;
-      min-height: 44px;
-      padding: 0.8rem 1.2rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-size: 0.95rem;
-      border: 1px solid transparent;
-      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-    }
-
-    .button:hover,
-    .social-link:hover {
-      transform: translateY(-1px);
-    }
-
-    .button.primary {
-      background: var(--accent);
-      color: #fff7f2;
-    }
-
-    .button.secondary,
-    .social-link {
-      background: rgba(255, 255, 255, 0.58);
-      border-color: var(--line);
-      color: var(--ink);
-    }
-
-    .hero-panel {
-      padding: 1.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .panel-image {
-      overflow: hidden;
-      border-radius: calc(var(--radius-lg) - 10px);
-      border: 1px solid rgba(31, 41, 51, 0.08);
-      background: #fff;
-    }
-
-    .panel-image img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-    }
-
-    .panel-caption {
-      color: var(--muted);
-      font-size: 0.97rem;
-      margin: 0;
-    }
-
-    main section {
-      padding: 1.25rem 0;
-    }
-
-    .section-card {
-      padding: 2rem;
-    }
-
-    .section-heading {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .section-heading p {
-      margin: 0;
-      color: var(--muted);
-      max-width: 42ch;
-    }
-
-    .about-grid,
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.25rem;
-    }
-
-    .about-grid p,
-    .contact-card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .skill-group {
-      padding: 1.2rem;
-      border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.5);
-      border: 1px solid rgba(31, 41, 51, 0.06);
-    }
-
-    .skill-group h3 {
-      margin-bottom: 0.75rem;
       font-size: 1.05rem;
     }
 
-    .skill-list,
-    .tag-list {
-      padding: 0;
+    .contact-line {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem 1.1rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .contact-line span::after {
+      content: "|";
+      margin-left: 1.1rem;
+      color: #9a9a9a;
+    }
+
+    .contact-line span:last-child::after {
+      content: "";
       margin: 0;
-      list-style: none;
     }
 
-    .skill-list li,
-    .tag-list li {
-      padding: 0.45rem 0.8rem;
-      border-radius: 999px;
-      background: var(--surface-strong);
-      border: 1px solid var(--line);
-      font-size: 0.92rem;
-    }
-
-    .projects-grid {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .project-card {
-      overflow: hidden;
-    }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
-      gap: 0;
-      min-height: 100%;
-    }
-
-    .project-visual {
-      background: linear-gradient(180deg, rgba(141, 52, 22, 0.08), rgba(95, 132, 111, 0.14));
-      padding: 1.25rem;
+    nav {
+      margin-top: 1.1rem;
       display: flex;
-      align-items: center;
-    }
-
-    .project-visual img {
-      width: 100%;
-      border-radius: var(--radius-md);
-      border: 1px solid rgba(31, 41, 51, 0.08);
-      box-shadow: 0 16px 36px rgba(31, 41, 51, 0.14);
-      background: #fff;
-    }
-
-    .project-copy {
-      padding: 1.9rem;
-      display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 1rem;
-    }
-
-    .project-meta {
-      color: var(--accent-deep);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      font-size: 0.8rem;
-    }
-
-    .project-copy p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .project-copy strong {
-      color: var(--ink);
-    }
-
-    .project-callout {
-      padding: 1rem 1.1rem;
-      border-radius: var(--radius-md);
-      background: rgba(246, 211, 188, 0.42);
-      border: 1px solid rgba(199, 92, 47, 0.15);
-    }
-
-    .contact-card {
-      padding: 1.5rem;
-    }
-
-    .contact-card h3 {
-      margin-bottom: 0.65rem;
-    }
-
-    footer {
-      padding: 2rem 0 3rem;
-      text-align: center;
-      color: var(--muted);
       font-size: 0.95rem;
     }
 
-    @media (max-width: 900px) {
-      .hero-grid,
-      .project-grid,
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
+    section + section {
+      margin-top: 2rem;
+    }
 
-      .hero {
-        padding-top: 4rem;
-      }
+    h2 {
+      font-size: 1.15rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.45rem;
+      margin-bottom: 1rem;
+    }
 
-      .hero-copy,
-      .hero-panel,
-      .section-card,
-      .project-copy,
-      .project-visual,
-      .contact-card {
-        padding: 1.4rem;
-      }
+    p {
+      margin: 0;
+    }
 
-      .section-heading {
-        align-items: start;
-        flex-direction: column;
-      }
+    .summary {
+      color: #333;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+
+    .skill-row strong {
+      display: inline-block;
+      min-width: 105px;
+    }
+
+    .project {
+      padding: 0 0 1.25rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid #e7e7e7;
+    }
+
+    .project:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: baseline;
+      margin-bottom: 0.45rem;
+      flex-wrap: wrap;
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+    }
+
+    .project-type {
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-style: italic;
+    }
+
+    .project p + p {
+      margin-top: 0.55rem;
+    }
+
+    .label {
+      font-weight: 700;
+    }
+
+    ul {
+      margin: 0.65rem 0 0;
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: 0.35rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
     }
 
     @media (max-width: 640px) {
-      .topbar-inner {
-        align-items: start;
-        flex-direction: column;
-      }
-
-      nav {
-        gap: 0.85rem;
+      .page {
+        margin: 0;
+        width: 100%;
+        border-left: 0;
+        border-right: 0;
+        padding: 1.5rem;
       }
 
       h1 {
-        max-width: none;
+        font-size: 1.9rem;
+      }
+
+      .contact-line span::after {
+        content: "";
+        margin: 0;
+      }
+
+      .contact-line {
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .skill-row strong {
+        min-width: 0;
       }
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">Yvette Wieseler</div>
+  <div class="page">
+    <header>
+      <h1>Yvette Wieseler</h1>
+      <p class="subtitle">Computer Science Student | Software Developer</p>
+      <div class="contact-line">
+        <span><a href="mailto:yvettewies1@gmail.com">yvettewies1@gmail.com</a></span>
+        <span><a href="https://github.com/ywiesel" target="_blank" rel="noreferrer">GitHub</a></span>
+        <span><a href="https://www.linkedin.com/in/yvette-wieseler-1a63712b4" target="_blank" rel="noreferrer">LinkedIn</a></span>
+      </div>
       <nav aria-label="Primary">
-        <a href="#about">About</a>
+        <a href="#summary">Summary</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
-    </div>
-  </header>
-
-  <div class="page-shell">
-    <section class="hero" id="top">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Computer Science Student • Software Developer</p>
-          <h1>Building dependable software with a strong testing mindset.</h1>
-          <p class="intro">
-            I am Yvette Wieseler, a developer who enjoys turning logic-heavy ideas into
-            clear, reliable programs. My work has focused on Java, C++, testing, and team-based
-            project development, with an emphasis on writing software that is understandable,
-            maintainable, and correct.
-          </p>
-          <div class="button-row">
-            <a class="button primary" href="#projects">View Projects</a>
-            <a class="button secondary" href="mailto:yvettewies1@gmail.com">Email Me</a>
-          </div>
-          <div class="socials" style="margin-top: 1rem;">
-            <a class="social-link" href="https://github.com/ywiesel" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="social-link" href="https://www.linkedin.com/in/yvette-wieseler-1a63712b4" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-        </div>
-
-        <aside class="hero-panel" aria-label="Featured project preview">
-          <div class="panel-image">
-            <img src="images/checkersPhoto.png" alt="Checkerboard game interface from Yvette Wieseler's Java project">
-          </div>
-          <p class="panel-caption">
-            Featured work includes a team-built Java checkerboard game with move validation,
-            turn logic, and supporting JUnit tests.
-          </p>
-        </aside>
-      </div>
-    </section>
+    </header>
 
     <main>
-      <section id="about">
-        <div class="section-card">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">About</p>
-              <h2>What I bring to a team</h2>
-            </div>
-            <p>I like projects that require careful logic, collaboration, and steady problem-solving.</p>
-          </div>
-          <div class="about-grid">
-            <p>
-              I have experience with object-oriented programming, data structures, algorithms,
-              and software design. I enjoy understanding how a system should behave and then
-              translating that into code that is readable and dependable.
-            </p>
-            <p>
-              My strongest work so far has been in academic and team settings where clear
-              architecture, testing, and communication mattered. I am especially interested in
-              opportunities where I can keep growing as a software engineer while contributing
-              thoughtful, well-structured code.
-            </p>
-          </div>
-        </div>
+      <section id="summary">
+        <h2>Professional Summary</h2>
+        <p class="summary">
+          Computer Science student with experience in Java, C++, software design, and testing.
+          Built academic and team-based projects focused on object-oriented programming, data
+          structures, and reliable program behavior. Interested in opportunities to contribute
+          clear, maintainable code while continuing to grow as a software developer.
+        </p>
       </section>
 
       <section id="skills">
-        <div class="section-card">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Skills</p>
-              <h2>Technical toolbox</h2>
-            </div>
-            <p>Core languages, tools, and concepts I have used in coursework and project work.</p>
-          </div>
-          <div class="about-grid">
-            <div class="skill-group">
-              <h3>Languages</h3>
-              <ul class="skill-list">
-                <li>Java</li>
-                <li>C++</li>
-                <li>Python</li>
-                <li>JavaScript</li>
-              </ul>
-            </div>
-            <div class="skill-group">
-              <h3>Web and Tools</h3>
-              <ul class="skill-list">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>JUnit</li>
-                <li>SDL2</li>
-              </ul>
-            </div>
-            <div class="skill-group">
-              <h3>Concepts</h3>
-              <ul class="skill-list">
-                <li>Object-Oriented Programming</li>
-                <li>Data Structures</li>
-                <li>Algorithms</li>
-                <li>MVC Architecture</li>
-              </ul>
-            </div>
-            <div class="skill-group">
-              <h3>Strengths</h3>
-              <ul class="skill-list">
-                <li>Team Collaboration</li>
-                <li>Testing and Debugging</li>
-                <li>Technical Documentation</li>
-                <li>Problem Decomposition</li>
-              </ul>
-            </div>
-          </div>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+          <p class="skill-row"><strong>Languages:</strong> Java, C++, Python, JavaScript</p>
+          <p class="skill-row"><strong>Web:</strong> HTML, CSS</p>
+          <p class="skill-row"><strong>Tools:</strong> Git, GitHub, JUnit, SDL2</p>
+          <p class="skill-row"><strong>Concepts:</strong> Object-Oriented Programming, Data Structures, Algorithms, MVC Architecture</p>
         </div>
       </section>
 
       <section id="projects">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Projects</p>
-            <h2>Work I am proud of</h2>
+        <h2>Projects</h2>
+
+        <article class="project">
+          <div class="project-header">
+            <h3 class="project-title">Checkerboard Game</h3>
+            <div class="project-type">Team Project</div>
           </div>
-          <p>Each project highlights a different part of how I think: implementation, testing, and design.</p>
-        </div>
+          <p>
+            Developed a command-line checkerboard game in Java as part of a four-person team.
+            Contributed to the implementation of move validation and turn logic, helping ensure
+            that gameplay rules were correctly enforced.
+          </p>
+          <p><span class="label">Technologies:</span> Java, Git, Terminal I/O</p>
+          <ul>
+            <li>Implemented logic for legal and invalid moves.</li>
+            <li>Worked on turn flow to support consistent gameplay behavior.</li>
+            <li>Collaborated within a shared codebase as part of a team development process.</li>
+          </ul>
+        </article>
 
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-grid">
-              <div class="project-visual">
-                <img src="images/image3.png" alt="Checkerboard game screenshot showing a move in progress">
-              </div>
-              <div class="project-copy">
-                <div>
-                  <p class="project-meta">Featured Team Project</p>
-                  <h3>Checkerboard Game</h3>
-                </div>
-                <p>
-                  Developed a command-line checkerboard game in Java as part of a four-person team.
-                  My contributions centered on <strong>move validation</strong> and
-                  <strong>turn-management logic</strong>, which helped keep gameplay rules
-                  consistent and predictable.
-                </p>
-                <div class="project-callout">
-                  Focused on the rule-heavy parts of the game, including legal moves,
-                  invalid actions, and turn flow between players.
-                </div>
-                <ul class="tag-list" aria-label="Checkerboard game technologies">
-                  <li>Java</li>
-                  <li>Git</li>
-                  <li>Terminal I/O</li>
-                  <li>Team Collaboration</li>
-                </ul>
-              </div>
-            </div>
-          </article>
+        <article class="project">
+          <div class="project-header">
+            <h3 class="project-title">JUnit Testing Example</h3>
+            <div class="project-type">Testing</div>
+          </div>
+          <p>
+            Wrote JUnit test cases to validate game behavior and support a more reliable
+            development process. Focused on testing rule-heavy parts of the application,
+            including movement logic and crown behavior.
+          </p>
+          <p><span class="label">Technologies:</span> Java, JUnit</p>
+          <ul>
+            <li>Created tests for core gameplay scenarios and edge cases.</li>
+            <li>Used testing to catch logic issues early and improve confidence in changes.</li>
+          </ul>
+        </article>
 
-          <article class="project-card">
-            <div class="project-grid">
-              <div class="project-visual">
-                <img src="images/junit2.png" alt="JUnit test screenshot for checkerboard game logic">
-              </div>
-              <div class="project-copy">
-                <div>
-                  <p class="project-meta">Testing</p>
-                  <h3>JUnit Testing Suite</h3>
-                </div>
-                <p>
-                  Wrote JUnit test cases to verify important game behavior and reinforce a
-                  test-driven mindset. The tests covered move handling, crown logic, and rule
-                  enforcement so the game could be changed with more confidence.
-                </p>
-                <div class="project-callout">
-                  This work strengthened my understanding of how testing supports cleaner design
-                  and catches edge cases early.
-                </div>
-                <ul class="tag-list" aria-label="JUnit testing technologies">
-                  <li>JUnit</li>
-                  <li>Java</li>
-                  <li>Debugging</li>
-                  <li>Validation Logic</li>
-                </ul>
-              </div>
-            </div>
-          </article>
+        <article class="project">
+          <div class="project-header">
+            <h3 class="project-title">UML Diagrams and Documentation</h3>
+            <div class="project-type">Design</div>
+          </div>
+          <p>
+            Created UML diagrams and supporting documentation to describe class relationships,
+            system structure, and object interactions. This helped organize the design before
+            and during development.
+          </p>
+          <p><span class="label">Technologies:</span> UML, Software Design Documentation</p>
+          <ul>
+            <li>Mapped architecture and class responsibilities clearly.</li>
+            <li>Used documentation to support planning and team communication.</li>
+          </ul>
+        </article>
 
-          <article class="project-card">
-            <div class="project-grid">
-              <div class="project-visual">
-                <img src="images/image4.png" alt="Checkerboard game screenshot showing invalid move feedback">
-              </div>
-              <div class="project-copy">
-                <div>
-                  <p class="project-meta">Documentation and Design</p>
-                  <h3>UML and System Planning</h3>
-                </div>
-                <p>
-                  Created UML diagrams and supporting documentation to map class relationships,
-                  responsibilities, and object interactions before and during development.
-                  This planning work made team communication easier and helped connect design
-                  decisions to implementation.
-                </p>
-                <div class="project-callout">
-                  I value documentation that is practical: enough structure to guide the build
-                  without getting in the way of iteration.
-                </div>
-                <ul class="tag-list" aria-label="Documentation technologies">
-                  <li>UML</li>
-                  <li>Software Design</li>
-                  <li>Architecture Planning</li>
-                  <li>Team Communication</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-grid">
-              <div class="project-visual">
-                <img src="images/image2.png" alt="Checkerboard game screenshot with a captured piece">
-              </div>
-              <div class="project-copy">
-                <div>
-                  <p class="project-meta">Additional Project</p>
-                  <h3>Maze Generator Using Union-Find</h3>
-                </div>
-                <p>
-                  Implemented a randomized maze generator in C++ using the Union-Find data
-                  structure and visualized the process with SDL2 in an MVC-based design.
-                  The project combined algorithmic thinking with structure and presentation.
-                </p>
-                <div class="project-callout">
-                  A good example of work that blends data structures, visualization, and software
-                  organization in the same project.
-                </div>
-                <ul class="tag-list" aria-label="Maze generator technologies">
-                  <li>C++</li>
-                  <li>SDL2</li>
-                  <li>Union-Find</li>
-                  <li>MVC</li>
-                </ul>
-              </div>
-            </div>
-          </article>
-        </div>
+        <article class="project">
+          <div class="project-header">
+            <h3 class="project-title">Maze Generator Using Union-Find</h3>
+            <div class="project-type">Algorithm and Visualization</div>
+          </div>
+          <p>
+            Implemented a randomized maze generator in C++ using the Union-Find data structure
+            and visualized the process with SDL2 in an MVC-based design.
+          </p>
+          <p><span class="label">Technologies:</span> C++, SDL2, Union-Find, MVC</p>
+          <ul>
+            <li>Applied a core data structure to a visual algorithmic project.</li>
+            <li>Combined program structure, visualization, and algorithm design in one system.</li>
+          </ul>
+        </article>
       </section>
 
       <section id="contact">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h2>Let’s connect</h2>
-          </div>
-          <p>I am open to internships, early-career opportunities, and conversations about software projects.</p>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Email</h3>
-            <p><a href="mailto:yvettewies1@gmail.com">yvettewies1@gmail.com</a></p>
-          </div>
-          <div class="contact-card">
-            <h3>LinkedIn</h3>
-            <p><a href="https://www.linkedin.com/in/yvette-wieseler-1a63712b4" target="_blank" rel="noreferrer">linkedin.com/in/yvette-wieseler-1a63712b4</a></p>
-          </div>
-          <div class="contact-card">
-            <h3>GitHub</h3>
-            <p><a href="https://github.com/ywiesel" target="_blank" rel="noreferrer">github.com/ywiesel</a></p>
-          </div>
-          <div class="contact-card">
-            <h3>Focus Areas</h3>
-            <p>Java development, C++ projects, testing, and software design fundamentals.</p>
-          </div>
-        </div>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:yvettewies1@gmail.com">yvettewies1@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/ywiesel" target="_blank" rel="noreferrer">github.com/ywiesel</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yvette-wieseler-1a63712b4" target="_blank" rel="noreferrer">linkedin.com/in/yvette-wieseler-1a63712b4</a></p>
       </section>
     </main>
 
     <footer>
-      © 2026 Yvette Wieseler. Built with HTML and CSS.
+      © 2026 Yvette Wieseler
     </footer>
   </div>
 </body>
