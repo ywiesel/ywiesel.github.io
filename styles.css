@@ -1,0 +1,288 @@
+:root {
+  --bg: #f7f7f7;
+  --surface: #ffffff;
+  --text: #1f1f1f;
+  --muted: #5b5b5b;
+  --border: #d9d9d9;
+  --accent: #1d4d7a;
+  --max-width: 960px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  width: min(calc(100% - 2rem), var(--max-width));
+  margin: 2rem auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+}
+
+header {
+  border-bottom: 2px solid var(--text);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.3rem;
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.contact-line {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.1rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.contact-line span::after {
+  content: "|";
+  margin-left: 1.1rem;
+  color: #9a9a9a;
+}
+
+.contact-line span:last-child::after {
+  content: "";
+  margin: 0;
+}
+
+nav {
+  margin-top: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+section + section {
+  margin-top: 2rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin: 0;
+}
+
+p + p {
+  margin-top: 0.75rem;
+}
+
+.lead {
+  color: #333;
+}
+
+.split-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.panel {
+  border: 1px solid var(--border);
+  padding: 1.25rem;
+  background: #fcfcfc;
+}
+
+.panel h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.65rem;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.button.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+}
+
+.skill-row strong {
+  display: inline-block;
+  min-width: 105px;
+}
+
+.project {
+  padding: 0 0 1.4rem;
+  margin-bottom: 1.4rem;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+  margin-bottom: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.project-title {
+  font-size: 1.1rem;
+}
+
+.project-type {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.label {
+  font-weight: 700;
+}
+
+ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.2rem;
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.project-gallery figure {
+  margin: 0;
+  border: 1px solid var(--border);
+  background: #fcfcfc;
+  padding: 0.65rem;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border: 1px solid #ececec;
+  display: block;
+}
+
+.project-gallery figcaption {
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.project-note,
+.placeholder {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .page {
+    margin: 0;
+    width: 100%;
+    border-left: 0;
+    border-right: 0;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  .contact-line {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .contact-line span::after {
+    content: "";
+    margin: 0;
+  }
+
+  .split-grid,
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-row strong {
+    min-width: 0;
+  }
+}
