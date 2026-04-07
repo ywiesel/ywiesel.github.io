@@ -1,10 +1,14 @@
 :root {
-  --bg: #f7f7f7;
+  --bg: #eef4ff;
   --surface: #ffffff;
-  --text: #1f1f1f;
-  --muted: #5b5b5b;
-  --border: #d9d9d9;
-  --accent: #1d4d7a;
+  --surface-soft: #f9fbff;
+  --text: #1f2340;
+  --muted: #5d6482;
+  --border: #cfd8f3;
+  --accent: #2457c5;
+  --accent-strong: #163a86;
+  --accent-soft: #dfe9ff;
+  --highlight: #fff1c7;
   --max-width: 960px;
 }
 
@@ -18,7 +22,10 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background:
+    radial-gradient(circle at top left, rgba(36, 87, 197, 0.14), transparent 24%),
+    radial-gradient(circle at top right, rgba(255, 193, 59, 0.16), transparent 22%),
+    linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
   color: var(--text);
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.6;
@@ -30,6 +37,7 @@ a {
 }
 
 a:hover {
+  color: var(--accent-strong);
   text-decoration: underline;
 }
 
@@ -39,10 +47,11 @@ a:hover {
   background: var(--surface);
   border: 1px solid var(--border);
   padding: 2.5rem;
+  box-shadow: 0 18px 42px rgba(30, 55, 120, 0.08);
 }
 
 header {
-  border-bottom: 2px solid var(--text);
+  border-bottom: 3px solid var(--accent);
   padding-bottom: 1.5rem;
   margin-bottom: 2rem;
 }
@@ -94,6 +103,16 @@ nav {
   font-size: 0.95rem;
 }
 
+nav a {
+  padding: 0.2rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
+
 section + section {
   margin-top: 2rem;
 }
@@ -105,6 +124,7 @@ h2 {
   border-bottom: 1px solid var(--border);
   padding-bottom: 0.45rem;
   margin-bottom: 1rem;
+  color: var(--accent-strong);
 }
 
 p {
@@ -128,7 +148,7 @@ p + p {
 .panel {
   border: 1px solid var(--border);
   padding: 1.25rem;
-  background: #fcfcfc;
+  background: linear-gradient(180deg, var(--surface-soft) 0%, #ffffff 100%);
 }
 
 .panel h3 {
@@ -148,6 +168,7 @@ p + p {
   padding: 0.75rem 1.1rem;
   border: 1px solid var(--accent);
   color: var(--accent);
+  background: #ffffff;
 }
 
 .button.primary {
@@ -189,6 +210,7 @@ p + p {
 
 .project-title {
   font-size: 1.1rem;
+  color: var(--accent-strong);
 }
 
 .project-type {
@@ -220,7 +242,7 @@ li + li {
 .project-gallery figure {
   margin: 0;
   border: 1px solid var(--border);
-  background: #fcfcfc;
+  background: linear-gradient(180deg, #ffffff 0%, var(--surface-soft) 100%);
   padding: 0.65rem;
 }
 
@@ -243,6 +265,11 @@ li + li {
   margin-top: 0.8rem;
   color: var(--muted);
   font-style: italic;
+}
+
+.lead {
+  padding-left: 1rem;
+  border-left: 4px solid var(--highlight);
 }
 
 footer {
