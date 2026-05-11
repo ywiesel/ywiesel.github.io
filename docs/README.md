@@ -1,14 +1,25 @@
-Yvette Wieseler Website
-Projects:
-  Code from a checkerboard game that is runnable in terminal that I developed in a team of four.
-  JUnit example:
-  <img width="452" alt="Screenshot 2025-05-22 at 1 19 47 AM" src="https://github.com/user-    attachments/assets/df59ea0c-6219-41ae-8e63-8fc1903813d4" />
+# Portfolio Maintenance Notes
 
-  Documentation example:
-  <img width="725" alt="Screenshot 2025-05-22 at 1 23 11 AM" src="https://github.com/user-attachments/assets/8d43bbcc-ffca-45c9-9b5e-999250effd26" />
-  
-  UMLs: 
-  <img width="485" alt="Screenshot 2025-05-22 at 1 26 20 AM" src="https://github.com/user-attachments/assets/35af6eb3-875c-4cab-a367-ba226fd069a9" />
+This folder is for internal notes about maintaining the portfolio repository.
 
+## Pages
 
-Resume:
+- `index.html`: homepage and portfolio overview
+- `about.html`: background, skills, and strengths
+- `projects.html`: project descriptions, screenshots, and presentation links
+
+## Assets
+
+- `assets/css/`: shared stylesheet
+- `assets/images/`: screenshots and image files
+- `assets/presentations/`: presentation PDFs
+
+## Path Rule
+
+Because the site is served from the repository root, use relative paths from the HTML file:
+
+```html
+<link rel="stylesheet" href="assets/css/styles.css">
+<img src="assets/images/checkersPhoto.png" alt="...">
+<a href="assets/presentations/Forge%20Mini-search%20engine%20S26.pdf">View Presentation PDF</a>
+```
