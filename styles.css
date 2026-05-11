@@ -192,6 +192,13 @@ p + p {
   color: #fff;
 }
 
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1rem;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr;
