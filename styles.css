@@ -153,6 +153,10 @@ p + p {
   color: #333;
 }
 
+.intro-section {
+  max-width: 780px;
+}
+
 .split-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
