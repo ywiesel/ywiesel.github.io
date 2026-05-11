@@ -8,7 +8,6 @@
   --accent: #2457c5;
   --accent-strong: #163a86;
   --accent-soft: #dfe9ff;
-  --highlight: #fff1c7;
   --mint: #dff7ee;
   --rose: #ffe2ea;
   --max-width: 960px;
@@ -289,12 +288,6 @@ li + li {
   margin-top: 0.8rem;
   color: var(--muted);
   font-style: italic;
-}
-
-.lead {
-  padding: 0.85rem 1rem;
-  border-left: 4px solid var(--highlight);
-  background: linear-gradient(90deg, rgba(255, 241, 199, 0.55) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 footer {
