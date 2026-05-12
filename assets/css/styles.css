@@ -127,6 +127,12 @@ nav a:hover {
   text-decoration: none;
 }
 
+nav a[aria-current="page"] {
+  color: var(--accent-strong);
+  border-bottom-color: var(--accent);
+  font-weight: 700;
+}
+
 section + section {
   margin-top: 2rem;
 }
