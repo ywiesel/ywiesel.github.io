@@ -208,6 +208,18 @@ p + p {
   margin-top: 1rem;
 }
 
+.project-video {
+  margin-top: 1rem;
+}
+
+.project-video video {
+  display: block;
+  width: 100%;
+  max-height: min(62vh, 520px);
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr;
