@@ -70,23 +70,34 @@
             <li>Built and reviewed JUnit tests for movement, crown behavior, and rule enforcement.</li>
             <li>Created UML diagrams and supporting documentation to clarify system structure.</li>
           </ul>
-          <div class="project-gallery">
-            <figure>
-              <img src="assets/images/checkersPhoto.png" alt="Checkerboard game screenshot showing the board in play">
-              <figcaption>Gameplay screenshot from the checkerboard project.</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/junit2.png" alt="JUnit test screenshot from the checkerboard project">
-              <figcaption>JUnit testing used to verify rule-heavy game behavior.</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/junit3.png" alt="Additional JUnit test screenshot from the checkerboard project">
-              <figcaption>More test coverage for important gameplay logic.</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/junit4.png" alt="JUnit test screenshot for checkerboard game directions">
-              <figcaption>Test cases covering direction and movement rules.</figcaption>
-            </figure>
+          <div class="project-slideshow" data-slideshow>
+            <div class="slideshow-frame">
+              <figure class="slide is-active">
+                <img src="assets/images/checkersPhoto.png" alt="Checkerboard game screenshot showing the board in play">
+                <figcaption>Gameplay screenshot from the checkerboard project.</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/images/junit2.png" alt="JUnit test screenshot from the checkerboard project">
+                <figcaption>JUnit testing used to verify rule-heavy game behavior.</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/images/junit3.png" alt="Additional JUnit test screenshot from the checkerboard project">
+                <figcaption>More test coverage for important gameplay logic.</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/images/junit4.png" alt="JUnit test screenshot for checkerboard game directions">
+                <figcaption>Test cases covering direction and movement rules.</figcaption>
+              </figure>
+              <figure class="slide">
+                <img src="assets/images/UMLs.drawio.png" alt="UML diagram for the checkerboard game design">
+                <figcaption>UML diagram used to plan and explain the checkerboard system design.</figcaption>
+              </figure>
+            </div>
+            <div class="slideshow-controls" aria-label="Checkerboard image slideshow controls">
+              <button class="slide-button" type="button" data-slide-previous aria-label="Previous image">‹</button>
+              <span class="slide-counter" data-slide-counter>1 of 5</span>
+              <button class="slide-button" type="button" data-slide-next aria-label="Next image">›</button>
+            </div>
           </div>
         </article>
 
@@ -113,5 +124,6 @@
       © 2026 Yvette Wieseler
     </footer>
   </div>
+  <script src="assets/js/project-gallery.js"></script>
 </body>
 </html>
