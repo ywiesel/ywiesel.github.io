@@ -298,12 +298,13 @@ p + p {
 }
 
 .skill-list li > .skill-level {
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: end;
+  grid-column: 1;
+  grid-row: 2;
+  z-index: 1;
+  justify-self: center;
   padding: 0.12rem 0.35rem;
   border-radius: 999px;
-  background: var(--accent-soft);
+  background: rgba(255, 255, 255, 0.84);
   color: var(--accent-strong);
   font-size: 0.72rem;
   font-variant-numeric: normal;
