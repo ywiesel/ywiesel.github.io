@@ -255,7 +255,7 @@ p + p {
 
 .skill-list li {
   display: grid;
-  grid-template-columns: 5rem minmax(0, 1fr) 2.5rem;
+  grid-template-columns: 4.5rem minmax(0, 1fr) 2.4rem 5.4rem;
   align-items: center;
   gap: 0.7rem;
 }
@@ -269,6 +269,10 @@ p + p {
   font-size: 0.82rem;
   font-variant-numeric: tabular-nums;
   text-align: right;
+}
+
+.skill-list .skill-level {
+  font-variant-numeric: normal;
 }
 
 .skill-list progress {
@@ -480,7 +484,13 @@ footer {
   }
 
   .skill-list li {
-    grid-template-columns: 4.5rem minmax(0, 1fr) 2.5rem;
-    gap: 0.5rem;
+    grid-template-columns: 4rem minmax(0, 1fr) 2.3rem;
+    gap: 0.45rem;
+  }
+
+  .skill-list .skill-level {
+    grid-column: 2 / 4;
+    margin-top: -0.35rem;
+    text-align: right;
   }
 }
