@@ -503,11 +503,14 @@ li + li {
 }
 
 .slide-counter {
-  margin: 0.4rem auto 0;
+  position: absolute;
+  left: 50%;
+  bottom: 2.25rem;
+  transform: translateX(-50%);
   min-width: 4.5rem;
   padding: 0.25rem 0.55rem;
   border-radius: 999px;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.92);
   color: var(--muted);
   font-size: 0.95rem;
   text-align: center;
