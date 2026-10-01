@@ -443,6 +443,7 @@ li + li {
 }
 
 .slideshow-frame {
+  position: relative;
   border: 1px solid var(--border);
   background: #fff;
   padding: 0.75rem;
@@ -473,14 +474,17 @@ li + li {
 }
 
 .slideshow-controls {
+  position: absolute;
+  inset: 50% 0.75rem auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 0.8rem;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .slide-button {
+  pointer-events: auto;
   width: 2.45rem;
   height: 2.45rem;
   border: 1px solid var(--accent);
@@ -498,7 +502,14 @@ li + li {
 }
 
 .slide-counter {
+  position: absolute;
+  left: 50%;
+  bottom: 0.5rem;
+  transform: translateX(-50%);
   min-width: 4.5rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
   color: var(--muted);
   font-size: 0.95rem;
   text-align: center;
