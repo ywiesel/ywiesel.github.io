@@ -258,12 +258,15 @@ p + p {
 
 .skill-list li {
   display: grid;
-  grid-template-columns: 4.5rem minmax(0, 1fr) 2.4rem 5.4rem;
+  grid-template-columns: minmax(0, 1fr) 2.5rem;
+  grid-template-rows: auto auto;
   align-items: center;
-  gap: 0.7rem;
+  gap: 0.25rem 0.6rem;
 }
 
 .skill-list .skill-name {
+  grid-column: 1;
+  grid-row: 1;
   font-size: 0.94rem;
 }
 
@@ -276,6 +279,8 @@ p + p {
 
 .skill-meter {
   position: relative;
+  grid-column: 1;
+  grid-row: 2;
   width: 100%;
   min-width: 0;
   height: 1.35rem;
@@ -293,6 +298,9 @@ p + p {
 }
 
 .skill-list li > .skill-level {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
   padding: 0.12rem 0.35rem;
   border-radius: 999px;
   background: var(--accent-soft);
@@ -306,6 +314,8 @@ p + p {
 }
 
 .skill-list .skill-percent {
+  grid-column: 2;
+  grid-row: 2;
   font-size: 0.82rem;
 }
 
@@ -341,7 +351,7 @@ p + p {
 
 .strength-card {
   display: grid;
-  grid-template-columns: 2.8rem minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 0.8rem;
   padding: 1.2rem;
   border: 1px solid var(--border);
@@ -360,13 +370,6 @@ p + p {
 
 .strength-card:nth-child(4) {
   --strength-accent: #c07816;
-}
-
-.strength-number {
-  color: var(--strength-accent, var(--accent));
-  font-size: 1.35rem;
-  font-weight: 700;
-  line-height: 1.1;
 }
 
 .strength-card h3 {
@@ -556,8 +559,4 @@ footer {
     height: min(56vh, 380px);
   }
 
-  .skill-list li {
-    grid-template-columns: 3.7rem minmax(0, 1fr) 2.2rem 4.7rem;
-    gap: 0.35rem;
-  }
 }
